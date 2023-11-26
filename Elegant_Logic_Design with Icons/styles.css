@@ -1,0 +1,68 @@
+body {
+  min-height: 100vh;
+  background: url("./background.png");
+  background-size: round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-board h3 {
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 35px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+.login-board {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  margin: 10px;
+  backdrop-filter: blur(8px);
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 57px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+.check {
+  display: flex;
+}
+.check h5 {
+  /* margin-bottom: 22px; */
+  color: white;
+  font-family: Calibri;
+  font-weight: 400;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-top: 32px;
+}
+h6 {
+  float: right;
+  top: 18px;
+  color: white;
+  font-family: Calibri;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 60px;
+}
+h4 {
+  color: white;
+  font-size: 16px;
+  font-family: Calibri;
+  font-weight: 400;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+}
+a:hover {
+  color: rgb(30, 72, 212);
+}

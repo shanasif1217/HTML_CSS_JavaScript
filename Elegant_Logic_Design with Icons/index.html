@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .input-icons i {
+        position: absolute;
+      }
+      .input-icons {
+        width: 100%;
+      }
+
+      .icon {
+        padding: 10px;
+        min-width: 40px;
+        margin-left: 295px;
+        color: #fff;
+        margin-top: 10px;
+      }
+
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        text-indent: 5px;
+        background: none;
+        color: #fff;
+        border-radius: 20px;
+        height: 50%;
+        border: 1px solid white;
+        margin: 10px;
+        text-emphasis-color: white;
+      }
+      .submission input {
+        background: white;
+        color: #000;
+        width: 110%;
+        border-radius: 18px;
+        border: none;
+        font-size: 18px;
+        height: 30px;
+        font-family: Calibri;
+        margin-left: 8px;
+      }
+      ::placeholder {
+        color: white;
+      }
+      .submission input:hover {
+        background-color: rgb(30, 72, 212);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-board">
+      <h3>Log in</h3>
+      <form action="#">
+        <div class="input-icons">
+          <i class="fa fa-user icon"></i>
+          <input
+            class="input-field"
+            type="email"
+            placeholder="Type Your Name"
+          />
+        </div>
+        <div class="input-icons">
+          <i class="fa fa-lock icon"></i>
+          <input class="input-field" type="password" placeholder="Password" />
+        </div>
+        <div class="check">
+          <input type="checkbox" />
+          <h5>Remember me</h5>
+          <h6>Forgot Password?</h6>
+        </div>
+        <div class="submission">
+          <input type="submit" value="Login" />
+        </div>
+        <h4>Don't have any account? <a href="#">Register</a></h4>
+      </form>
+    </div>
+  </body>
+</html>
