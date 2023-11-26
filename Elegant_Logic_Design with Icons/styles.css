@@ -33,8 +33,7 @@ body {
   display: flex;
 }
 .check h5 {
-  /* margin-bottom: 22px; */
-  color: white;
+    color: white;
   font-family: Calibri;
   font-weight: 400;
   font-size: 16px;
