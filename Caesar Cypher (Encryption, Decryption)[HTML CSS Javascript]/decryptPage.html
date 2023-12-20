@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decryption Page[JavaScript Use Case]</title>
+    <style>
+      input {
+        margin: 20px;
+        background-color: rgba(0, 0, 0, 0.18);
+        border-radius: 10px;
+        height: 40px;
+        border: none;
+      }
+      ::placeholder {
+        color: rgb(26, 33, 147);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+      button {
+        border-radius: 10px;
+        border: none;
+      }
+      button:hover {
+        color: blue;
+        background-color: bisque;
+      }
+      textarea {
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        text-align: none;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="messageInput">Enter your Message:</label>
+      <input
+        type="text"
+        id="messageInput"
+        size="50"
+        placeholder="Message"
+        required
+      />
+      <label for="decpKeyInput">Enter Key:</label>
+      <input
+        type="number"
+        id="decpKeyInput"
+        placeholder="Number (1-5)"
+        min="1"
+        max="5"
+        step="1"
+        required
+        style="width: 200px"
+      />
+      <button type="button" onclick="encpMsg()">Click Me</button>
+      <p>The Decrypted Message</p>
+      <label for="decpMessage"></label>
+      <textarea
+        name="#"
+        id="decpMessage"
+        cols="30"
+        rows="10"
+        style="resize: none; width: 400px; height: 100px"
+      ></textarea>
+      <br />
+      <h2>For Encryption Click</h2>
+      <a href="encrypPage.html">Click for Encryption page</a>
+    </form>
+    <script>
+      function encpMsg() {
+        const messageInput = document.getElementById("messageInput");
+        const keyInput = document.getElementById("decpKeyInput");
+        const decryptedMessageTextarea = document.getElementById("decpMessage");
+
+        const message = messageInput.value;
+        const key = parseInt(keyInput.value);
+        let decryptedMessage = "";
+        for (let i = 0; i < message.length; i++) {
+          const charCode = message.charCodeAt(i);
+          const decryptedCharCode = charCode - key;
+          const decryptedChar = String.fromCharCode(decryptedCharCode);
+          decryptedMessage += decryptedChar;
+        }
+        decryptedMessageTextarea.value = decryptedMessage;
+      }
+    </script>
+  </body>
+</html>
