@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encryption Page[JavaScript Use Case]</title>
+    <style>
+      input {
+        margin: 20px;
+        background-color: rgba(173, 142, 142, 0.18);
+        border-radius: 10px;
+        height: 40px;
+        border: 1px solid rgb(2, 5, 65);
+      }
+      ::placeholder {
+        color: rgb(2, 5, 65);
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 15px;
+        font-weight: 200;
+        text-align: center;
+        text-indent: 10px;
+      }
+      button {
+        border: none;
+        margin: 5px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+      button:hover {
+        color: blue;
+        background-color: bisque;
+      }
+      textarea {
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        text-align: none;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="tableInput">Enter your Number:</label>
+      <input
+        type="number"
+        id="tableInput"
+        size="50"
+        placeholder="Table number"
+        required
+      />
+      <label for="keyLimit">Enter Limit:</label>
+      <input
+        type="number"
+        id="keyLimit"
+        placeholder="Number(>0)"
+        min="1"
+        step="1"
+        required
+        style="width: 200px"
+      />
+      <button type="button" onclick="genTable()">Generate</button>
+      <button type="reset">Reset</button>
+      <p>The Table is</p>
+      <label for="tableGeneratorArea"></label>
+      <textarea name="#" id="tableGeneratorArea" cols="30" rows="20"></textarea>
+      <br />
+    </form>
+    <script>
+      function genTable() {
+        const messageInput = document.getElementById("tableInput");
+        const keyInput = document.getElementById("keyLimit");
+        const tableTextarea = document.getElementById("tableGeneratorArea");
+
+        const message = parseInt(messageInput.value);
+        const key = parseInt(keyInput.value);
+        let GeneratedTable = "";
+
+        for (let i = 1; i <= key; i++) {
+          GeneratedTable += message + " x " + i + " = " + message * i + "\n";
+        }
+
+        tableTextarea.innerHTML = GeneratedTable;
+      }
+    </script>
+  </body>
+</html>
